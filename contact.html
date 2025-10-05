@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Info - My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">🌸 My Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="project.html">Project</a></li>
+        <li><a href="contact.html" class="active">Contact Info</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="page-section contact-page">
+    <h1>📬 Get in Touch</h1>
+    <p>Here are my contact details. Feel free to reach out through any of the platforms below.</p>
+
+    <div class="contact-container">
+      <!-- Contact Details -->
+      <div class="contact-info fade-slide">
+        <h2>📇 My Contact Information</h2>
+        <ul>
+          <li><strong>Name:</strong> Rinchen Dema</li>
+          <li><strong>Email:</strong> <a href="mailto:rinchen556@gmail.com">rinchen556@gmail.com</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+97577690283">+975-77690283</a></li>
+          <li><strong>Address:</strong> Samtse, Bhutan</li>
+          <li><strong>Facebook:</strong> <a href="https://www.facebook.com/rinchen.dema.1042" target="_blank">View Profile</a></li>
+        </ul>
+
+        <!-- Google Maps Embed -->
+        <div class="map-container">
+          <h3>📍 My Location</h3>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28257.07890970928!2d89.611!3d27.472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e194d2d3f9a5c9%3A0x12345!2sThimphu%2C%20Bhutan!5e0!3m2!1sen!2sbt!4v1694388888888!5m2!1sen!2sbt" 
+            width="100%" 
+            height="250" 
+            style="border:0;" 
+            allowfullscreen 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form fade-slide">
+        <h2>💌 Send Me a Message</h2>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" rows="6" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll animation -->
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-slide');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

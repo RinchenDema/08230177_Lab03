@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">🌸 My Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="project.html" class="active">Project</a></li>
+        <li><a href="contact.html">Contact Info</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="page-section projects-page">
+    <h1>🚀 My Projects</h1>
+    <p>Here are some of the projects I’ve worked on, blending creativity with technology.</p>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card fade-slide">
+        <img src="phy.jpg" alt="Physics Exhibition">
+        <h2>⚡ Physics Exhibition</h2>
+        <p>Showcasing innovative science models and experiments.</p>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card fade-slide">
+        <img src="p.jpg" alt="Panel Discussion">
+        <h2>🗣️ Panel Discussion</h2>
+        <p>Interactive session with peers to exchange perspectives.</p>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card fade-slide">
+        <img src="practical.jpg" alt="Practical Work">
+        <h2>🔬 Practical Work</h2>
+        <p>Hands-on experiments and learning beyond the classroom.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript for scroll animation -->
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-slide');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

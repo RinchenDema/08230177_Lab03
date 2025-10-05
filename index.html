@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">My Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact Info</a></li>
+        <li><a href="project.html">Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="slide-in delay-1">WELCOME TO MY E-PORTFOLIO 🐱</h1>
+        <p class="slide-in delay-2">
+          This e-portfolio is a space where I share my academic journey, skills, and projects,
+          reflecting my growth as a learner and highlighting the knowledge and experiences I have gained.
+        </p>
+        <p class="slide-in delay-3">
+          Thank you for taking the time to visit my portfolio — I invite you to explore and engage with my work. ✨
+        </p>
+      </div>
+
+      <div class="hero-image slide-in delay-4">
+        <img src="pic.jpg" alt="My Portfolio Picture">
+      </div>
+    </div>
+  </section>
+
+  <!-- 🌷 Greeting + Controls Section -->
+  <section class="interaction-section">
+    <div class="greeting-container">
+      <p id="date" class="cute-greeting"></p>
+    </div>
+
+    <div class="button-container">
+      <label for="color-picker">🎨 Choose Navbar Color:</label>
+      <input type="color" id="color-picker" value="#9d4edd" title="Pick a color" />
+      <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

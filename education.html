@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education - My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* 🌸 Read More Button (Light Mode) */
+    .read-more-btn {
+      background-color: #c77dff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    }
+
+    .read-more-btn:hover {
+      background-color: #9d4edd;
+      transform: scale(1.05);
+    }
+
+    /* 🌙 Read More Button (Dark Mode) */
+    body.dark-mode .read-more-btn {
+      background-color: #9d4edd;
+      color: #fff;
+    }
+
+    body.dark-mode .read-more-btn:hover {
+      background-color: #7b2cbf;
+    }
+
+    /* ✨ Fade Animation for Text */
+    .more-text {
+      display: inline-block;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.6s ease, max-height 0.6s ease;
+    }
+
+    .more-text.show {
+      opacity: 1;
+      max-height: 500px; /* enough for paragraph */
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">🐱 My Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="education.html" class="active">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact Info</a></li>
+        <li><a href="project.html">Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Education Section -->
+  <section class="page-section education-page">
+    <h1>📚 My Education</h1>
+    <p>Here’s a timeline of my academic journey, along with memories and experiences.</p>
+
+    <!-- College -->
+    <div class="edu-item">
+      <img src="samtse college.webp" alt="College">
+      <div class="edu-text">
+        <h2>B.Ed in Secondary Education</h2>
+        <p><strong>Samtse College of Education</strong> (2023–2027)</p>
+        <p class="description">
+          I am currently pursuing my bachelor’s degree at Samtse College of Education, taking a course in IT.
+          <span class="more-text">
+            Since my childhood, becoming a teacher has always been my dream, and I feel blessed to have been enrolled in this esteemed college of teacher education.
+            This journey has not only supported my personal growth but also shaped my professional career.
+            Through the program, I have gained deep insights into pedagogy, ICT in teaching, and curriculum design.
+            In the near future, I aspire to become an educator who empowers students to explore the digital world with safe ethics and practices.
+          </span>
+        </p>
+        <button class="read-more-btn">Read more</button>
+      </div>
+    </div>
+
+    <!-- High School -->
+    <div class="edu-item">
+      <img src="nangkor.jpg" alt="High School">
+      <div class="edu-text">
+        <h2>High School</h2>
+        <p><strong>Nangkor Central School</strong> (2019–2022)</p>
+        <p class="description">
+          I completed my high school education at Nangkor Central School, located in eastern Bhutan under Pemagatshel Dzongkhag.
+          <span class="more-text">
+            It is one of the renowned schools in the country, often ranking among the top ten in the BCSE results.
+            The strong study culture there enabled many students, including myself, to achieve our goals for higher education.
+            I feel fortunate to have studied under the inspiring teachers and good leadership of this school.
+          </span>
+        </p>
+        <button class="read-more-btn">Read more</button>
+      </div>
+    </div>
+
+    <!-- Lower School -->
+    <div class="edu-item">
+      <img src="shumar.webp" alt="Lower School">
+      <div class="edu-text">
+        <h2>Lower School</h2>
+        <p><strong>Shumar Lower Secondary School</strong> (2017–2018)</p>
+        <p class="description">
+          Before that, I attended Shumar Lower Secondary School, which was my first boarding school.
+          <span class="more-text">
+            It was there that I built the foundation of my education and learned many lessons that helped me personally and academically.
+            Out of gratitude for my school, I served as a culture coordinator for one year, an experience that allowed me to develop leadership skills.
+            This role not only shaped my mindset but also imparted important values to my life.
+          </span>
+        </p>
+        <button class="read-more-btn">Read more</button>
+      </div>
+    </div>
+
+    <!-- Primary School -->
+    <div class="edu-item">
+      <img src="shali pry.webp" alt="Primary School">
+      <div class="edu-text">
+        <h2>Primary School</h2>
+        <p><strong>Shali Primary School</strong> (2010–2016)</p>
+        <p class="description">
+          My education journey began in 2009, though I was officially enrolled in 2010.
+          <span class="more-text">
+            In 2009, as a four-year-old, I would accompany my father, who was a teacher, to school.
+            I was too young to be enrolled then, but my love for learning had already begun.
+            These schools nurtured me and laid the basic foundation of my educational journey.
+            Looking back, those early days remain some of the most memorable and carefree moments of my life.
+            Throughout school, I performed well academically and often topped my class.
+            Beyond academics, I actively participated in cultural events, sports, and other activities.
+            I also served as a house captain, which further enriched my school experience.
+            These opportunities helped me learn new skills, gain knowledge, and guided me toward a better path in life.
+          </span>
+        </p>
+        <button class="read-more-btn">Read more</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Toggle read more / less animation
+    document.querySelectorAll(".read-more-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const moreText = button.previousElementSibling.querySelector(".more-text");
+        moreText.classList.toggle("show");
+        button.textContent = moreText.classList.contains("show") ? "Read less" : "Read more";
+      });
+    });
+
+    // Example: Dark mode sync (if you already have this in script.js, skip this part)
+    const savedMode = localStorage.getItem("theme");
+    if (savedMode === "dark") document.body.classList.add("dark-mode");
+  </script>
+    <script src="script.js"></script>
+</body>
+</html>
